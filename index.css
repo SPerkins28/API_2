@@ -51,6 +51,12 @@ p {
     margin: .5em;
 }
 
+#rdmGifResult:hover {
+    box-shadow: 0 8px 16px rgba(252, 252, 252, 0.15);
+    transform: scale(1.1, 1.1);
+    transition: box-shadow 0.3s ease-in-out;
+}
+
 .wrapper{
     margin-top: 2em;
     display: flex;
@@ -90,36 +96,6 @@ p {
     text-shadow:white 0px 0px 4px,white 0px 0px 4px,white 0px 0px 4px,white 0px 0px 4px, white 0px 0px 4px, white 0px 0px 4px;
 }
 
-#previousBtn {
-    background: none;
-    border: none;
-    color: black;
-    font-family: thor;
-    font-weight: 200;
-    font-size: 12px;
-    text-shadow:white 0px 0px 4px,white 0px 0px 4px,white 0px 0px 4px,white 0px 0px 4px, white 0px 0px 4px, white 0px 0px 4px;
-}
-
-#nextBtn {
-    background: none;
-    border: none;
-    color: black;
-    font-family: thor;
-    font-weight: 200;
-    font-size: 12px;
-    text-shadow:white 0px 0px 4px,white 0px 0px 4px,white 0px 0px 4px,white 0px 0px 4px, white 0px 0px 4px, white 0px 0px 4px;
-}
-
-#previousBtnImg {
-    width: 40px;
-    height: 40px;
-}
-
-#nextBtnImg {
-    width: 40px;
-    height: 40px;
-}
-
 #searchResults {
     display: flex;
     flex-wrap: wrap;
@@ -131,6 +107,12 @@ p {
     width: 250px;
     height: 250px;
     margin: .5em;
+}
+
+#gifResult:hover {
+    box-shadow: 0 16px 32px rgba(44, 252, 78, 0.575);
+    transform: scale(1.1, 1.1);
+    transition: box-shadow 0.3s ease-in-out;
 }
 
 

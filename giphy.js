@@ -110,19 +110,13 @@ const nextBtn = document.querySelector('.next');
 const previousBtn = document.querySelector('.prev');
 const nav = document.querySelector('nav');
 
-nav.style.display = 'none';
-let pageNumber = 0;
-let displayNav = false;
-
 searchForm.addEventListener('submit', searchResults);
-nextBtn.addEventListener('click', nextPage); 
-previousBtn.addEventListener('click', previousPage); 
 
 function searchResults(e) {
     e.preventDefault();
     document.getElementById("onLoad").style.display = "none";
 
-    searchUrl = `${baseSearchURL}?api_key=${key}&q=${searchTerm.value}&limit=50&offset=12&rating=g&lang=en`;
+    searchUrl = `${baseSearchURL}?api_key=${key}&q=${searchTerm.value}&limit=12&offset=12&rating=g&lang=en`;
     console.log(searchUrl);
     
     fetch(searchUrl)
@@ -142,33 +136,10 @@ function displayResults(json) {
 
     let gifData = json.data;
 
-    if(gifData.length >= 12) { 
-        nav.style.display = 'block'; 
-    } else {
-        nav.style.display = 'none'; 
-    }
-
     for(i = 0; i < gifData.length; i++) {
-        
         let gifPlace = document.createElement('img');
         gifPlace.src = gifData[i].images.original.url;
         gifPlace.id = "gifResult";
         gifs.appendChild(gifPlace);
     }
 };
-
-function nextPage(e) { 
-    pageNumber++;
-    fetchResults(e);
-    console.log("Page number:", pageNumber);
-}
-
-function previousPage(e) { 
-    if(pageNumber > 0) { 
-        pageNumber--;
-    } else {
-        return;
-    }
-    fetchResults(e); 
-    console.log("Page:", pageNumber);
-} 
