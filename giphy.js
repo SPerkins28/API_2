@@ -119,11 +119,9 @@ nextBtn.addEventListener('click', nextPage);
 previousBtn.addEventListener('click', previousPage); 
 
 function searchResults(e) {
-    let loadDiv = document.getElementById('onLoad');
     e.preventDefault();
-    if (loadDiv.display){
-    document.body.removeChild(onLoad);
-    } else{
+    document.getElementById("onLoad").style.display = "none";
+
     searchUrl = `${baseSearchURL}?api_key=${key}&q=${searchTerm.value}&limit=50&offset=12&rating=g&lang=en`;
     console.log(searchUrl);
     
@@ -131,13 +129,12 @@ function searchResults(e) {
         .then(function(result) {
             return result.json(); //? jsonifying the data result from url
         }) .then (function(json) {
-            displayResults2(json);
+            displayResults(json);
             console.log(json);
         });
-    }
 }
 
-function displayResults2(json) {
+function displayResults(json) {
     let gifs = document.getElementById('searchResults');
     while (gifs.firstChild) {
         gifs.removeChild(gifs.firstChild);
