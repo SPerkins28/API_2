@@ -1,0 +1,139 @@
+/* @media only screen and (min-width: 375px) {
+    [class*="col-"] {
+      display: flex;
+      justify-content: center;
+    }
+} */
+
+@media only screen and (max-width: 600px) {
+    .display-4 {
+      font-size: 24px;
+    }
+}
+
+@font-face{
+    font-family: 'thor';
+    src: url(fonts/dameron/dameron.ttf);
+}
+
+body {
+    background-image: url(./assets/galaxy.jpg);
+    background-size: fill;
+    background-position: center;
+}
+
+.container {
+    padding: .2em;
+}
+
+#jumbotron {
+    text-align: left;
+    background: none;
+    display: flex;
+    justify-content: flex-start;
+    padding-left: .75em;
+    padding-right: .75em;
+}
+
+#jumboContainer {
+    margin-left: 2em;
+}
+
+p {
+    color: black;
+    font-family: thor;
+    text-shadow:white 0px 0px 4px,white 0px 0px 4px,white 0px 0px 4px,white 0px 0px 4px, white 0px 0px 4px, white 0px 0px 4px;
+}
+
+#rdmGif1 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+#rdmGifResult {
+    border-radius: 10px;
+    width: 250px;
+    height: 250px;
+    margin: .5em;
+}
+
+.wrapper{
+    margin-top: 2em;
+    display: flex;
+    justify-content: center;
+}
+
+#searchBox {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.form-control {
+    margin-right: 0.25em;
+}
+
+.btnContainer {
+    margin-left: 0.25em;
+    display: flex;
+    align-content: center;
+}
+
+.submit {
+    font-family: thor;
+    border-radius: 5px;
+}
+
+.searchTextContainer {
+    text-align: left;
+    margin-top: 1em;
+}
+
+.searchText {
+    color: black;
+    font-family: thor;
+    font-weight: 200;
+    font-size: 12px;
+    text-shadow:white 0px 0px 4px,white 0px 0px 4px,white 0px 0px 4px,white 0px 0px 4px, white 0px 0px 4px, white 0px 0px 4px;
+}
+
+#previousBtn {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+#nextBtn {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+#previousBtnImg {
+    width: 40px;
+    height: 40px;
+}
+
+#nextBtnImg {
+    width: 40px;
+    height: 40px;
+}
+
+#searchResults {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+#gifResult {
+    border-radius: 10px;
+    width: 250px;
+    height: 250px;
+    margin: .5em;
+}
+
+
