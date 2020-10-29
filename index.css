@@ -52,7 +52,7 @@ p {
 }
 
 #rdmGifResult:hover {
-    box-shadow: 0 8px 16px rgba(252, 252, 252, 0.15);
+    box-shadow: 0 16px 32px rgba(44, 252, 78, 0.575);
     transform: scale(1.1, 1.1);
     transition: box-shadow 0.3s ease-in-out;
 }
